@@ -1,0 +1,400 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #f5f5f5;
+  color: #222;
+}
+
+/* TOPO */
+
+.topo {
+  background: linear-gradient(135deg, #ff5f00, #ff7b00);
+  color: white;
+  padding: 30px 20px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.logo h1 {
+  font-size: 2.3rem;
+}
+
+.topo-direita {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.busca-box input {
+  width: 300px;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  outline: none;
+}
+
+/* TEMA */
+
+.tema-btn {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+/* BANNER */
+
+.banner {
+  height: 400px;
+
+  background: url('https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?q=80&w=1600&auto=format&fit=crop') center/cover;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  position: relative;
+}
+
+.banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+}
+
+.banner-texto {
+  position: relative;
+  z-index: 2;
+  color: white;
+}
+
+.banner-texto h2 {
+  font-size: 3rem;
+}
+
+.banner-texto p {
+  margin: 15px 0;
+}
+
+.banner-texto a {
+  background: #ff5f00;
+  color: white;
+  text-decoration: none;
+  padding: 14px 28px;
+  border-radius: 12px;
+  display: inline-block;
+}
+
+/* BANNER ANIMADO */
+
+.banner-animado {
+  background: #111;
+  color: white;
+  padding: 15px;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: mover 15s linear infinite;
+  font-weight: bold;
+}
+
+@keyframes mover {
+
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+
+}
+
+/* RANKING */
+
+.ranking {
+  padding: 30px;
+}
+
+.ranking h2 {
+  margin-bottom: 20px;
+}
+
+.ranking-box {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.ranking-card {
+  background: white;
+  padding: 15px;
+  border-radius: 20px;
+  flex: 1;
+  min-width: 220px;
+
+  text-decoration: none;
+  color: inherit;
+
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+
+  transition: .3s;
+}
+
+.ranking-card:hover {
+  transform: translateY(-5px);
+}
+
+.ranking-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 12px;
+}
+
+.ranking-card span {
+  font-size: 2rem;
+}
+
+/* PRODUTOS */
+
+.produtos {
+  padding: 30px;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 25px;
+}
+
+.card {
+  background: white;
+  border-radius: 22px;
+  overflow: hidden;
+  position: relative;
+
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+
+  transition: .3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.card h3 {
+  padding: 15px 15px 5px;
+}
+
+.card p {
+  padding: 0 15px;
+  color: #666;
+}
+
+.preco {
+  padding: 10px 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.antigo {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.novo {
+  color: #ff5f00;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.card a {
+  display: block;
+  margin: 15px;
+  text-align: center;
+  background: #ff5f00;
+  color: white;
+  text-decoration: none;
+  padding: 14px;
+  border-radius: 12px;
+}
+
+.desconto {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+
+  background: red;
+  color: white;
+
+  padding: 8px 12px;
+
+  border-radius: 10px;
+}
+
+.favorito {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+
+  width: 45px;
+  height: 45px;
+
+  background: white;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  font-size: 1.3rem;
+}
+
+/* WHATSAPP */
+
+.whatsapp {
+  position: fixed;
+
+  left: 20px;
+  bottom: 20px;
+
+  width: 65px;
+  height: 65px;
+
+  background: white;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+
+  z-index: 999;
+}
+
+.whatsapp img {
+  width: 38px;
+}
+
+/* NOTIFICAÇÃO */
+
+.notificacao {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+
+  background: #111;
+  color: white;
+
+  padding: 15px 20px;
+
+  border-radius: 12px;
+
+  opacity: 0;
+
+  transition: .4s;
+}
+
+.notificacao.show {
+  opacity: 1;
+}
+
+/* FOOTER */
+
+footer {
+  background: #111;
+  color: white;
+
+  text-align: center;
+
+  padding: 40px 20px;
+  margin-top: 40px;
+}
+
+/* TEMA ESCURO */
+
+body.dark {
+  background: #111;
+  color: white;
+}
+
+body.dark .card,
+body.dark .ranking-card,
+body.dark .busca-box input {
+  background: #1f1f1f;
+  color: white;
+}
+
+body.dark .card p,
+body.dark .antigo {
+  color: #bbb;
+}
+
+/* RESPONSIVO */
+
+@media(max-width: 768px) {
+
+  .topo {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .topo-direita {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .busca-box input {
+    width: 100%;
+  }
+
+  .banner-texto h2 {
+    font-size: 2rem;
+  }
+
+  /* 2 PRODUTOS NO CELULAR */
+
+  .produtos {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    padding: 15px;
+  }
+
+  .card img {
+    height: 150px;
+  }
+
+  .card h3 {
+    font-size: 0.95rem;
+  }
+
+  .novo {
+    font-size: 1.1rem;
+  }
+
+}
